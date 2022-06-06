@@ -1,4 +1,4 @@
-# Drops NFT Loans Developments
+# Drops NFT Loans
 
 ## Multisig (Gnosis Safe)
 
