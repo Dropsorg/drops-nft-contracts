@@ -55,3 +55,13 @@
 | Oracle       | 0x97ffEaCd62bdeA0b6E3B167FFd3cc25f8A8fc47f | ---      |
 | D3-ETH       | 0x05231980914B702083B9Ac08002325654F6eb95B | ---      |
 | D3-MOONBIRD  | 0x7BB678A6c5daDb6b03032EF46c6263ff09bB2799 | ---      |
+
+### 5. Pool 4
+
+| Contract     | Address                                    | Owner    |
+| ------------ | ------------------------------------------ | -------- |
+| Comptroller  | 0x7312a3bc8733b068989ef44bac6344f07cfcde7f | Deployer |
+| CompoundLens | 0xF6d2f3c7AD334FbABc3264FC733962e5ceA65F5A | ---      |
+| Oracle       | 0x97ffEaCd62bdeA0b6E3B167FFd3cc25f8A8fc47f | ---      |
+| D4-ETH       | 0x588C13e685e44B22DC6647937481C816E5FeE086 | ---      |
+| D4-SQUIGGLES | 0xA7B06C501e89a963AC9b33a41A571AD23FfEb502 | ---      |
