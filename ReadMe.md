@@ -30,10 +30,12 @@
 | Oracle       | 0x79B994AeA4Fd6Dea9b6EE807c2704Fa36219b5f6 | ---      |
 | D1-ETH       | 0xD72929e284E8bc2f7458A6302bE961B91bccB339 | ---      |
 | D1-USDC      | 0x7489c6BaAba57d9a431642b26E034aCD191039f7 | ---      |
-| D1-BAYC      | 0x8c1CfaE7866fA2CD4C82fEa9a660cfB0FAa7578F | ---      |
-| D1-fiPUNKS   | 0xdF6602D43871b88d993B604d81731fd8a90cF645 | ---      |
-| D1-MAYC      | 0xd56c42e2ADc844080eB7E13Ad66AdE8600470179 | ---      |
-| D0-OTHR      | 0xD0f97bE2F6b0ce5Af703c11d09082e1a0a3855Be | ---      |
+| D1-BAYC      | 0xC3D8e1fD31e55EDe71aE1453dDf858461E23B59a | ---      |
+| D1-fiPUNKS   | 0x3786f8ab0a0652e23c6503a9a44322b3295608fe | ---      |
+| D1-MAYC      | 0x397a7E7710F3a074dA1B6823E94047E57A5db896 | ---      |
+| D1-OTHR      | 0x109D97019EdA5e32B31Cd995Ba3D29FC5A3e7c97 | ---      |
+| D1-MOONBIRD  | 0x397d11F822578B37b10582db5BCEb43BF6E7C85b | ---      |
+| D1-LAND      | 0x5188510a48e8F716e80338c2a2AD4FC415aFC290 | ---      |
 | fiPUNKS      | 0x458FCD33AD32DE55875578da8cF1248B8765EC95 | ---      |
 
 ### 3. Pool 2
@@ -44,7 +46,7 @@
 | CompoundLens    | 0x9eD3F27fE1D070b329fFD7B7d3A5Ce176D845884 | ---      |
 | Oracle          | 0xdA12A24515E4BA722103A8FF648ba11fAF7992E1 | ---      |
 | D2-ETH          | 0x0a1EF7feD1B691253F9367daf682BA08A9D2fD9C | ---      |
-| D2-CYBERBROKERS | 0xF6dc34c07EDa4855B5075463DCCFFAB42598415b | ---      |
+| D2-CYBERBROKERS | 0x83355362ebb2180873844523044c866170f9D99C | ---      |
 
 ### 4. Pool 3
 
@@ -54,14 +56,13 @@
 | CompoundLens | 0xF6d2f3c7AD334FbABc3264FC733962e5ceA65F5A | ---      |
 | Oracle       | 0x97ffEaCd62bdeA0b6E3B167FFd3cc25f8A8fc47f | ---      |
 | D3-ETH       | 0x05231980914B702083B9Ac08002325654F6eb95B | ---      |
-| D3-MOONBIRD  | 0x7BB678A6c5daDb6b03032EF46c6263ff09bB2799 | ---      |
 
 ### 5. Pool 4
 
 | Contract     | Address                                    | Owner    |
 | ------------ | ------------------------------------------ | -------- |
-| Comptroller  | 0x7312a3bc8733b068989ef44bac6344f07cfcde7f | Deployer |
-| CompoundLens | 0xF6d2f3c7AD334FbABc3264FC733962e5ceA65F5A | ---      |
-| Oracle       | 0x97ffEaCd62bdeA0b6E3B167FFd3cc25f8A8fc47f | ---      |
+| Comptroller  | 0x3903E6EcD8bc610D5a01061B1Dc31affD21F81C6 | Deployer |
+| CompoundLens | 0xd846430a1Af51349Ef6D0840E0d32431F564b979 | ---      |
+| Oracle       | 0xfde76511A27A7a5b8C802E5Fda14CC0F879bC2C6 | ---      |
 | D4-ETH       | 0x588C13e685e44B22DC6647937481C816E5FeE086 | ---      |
-| D4-SQUIGGLES | 0xA7B06C501e89a963AC9b33a41A571AD23FfEb502 | ---      |
+| D4-SQUIGGLES | 0x30C40201f7Af91C1B1EeF6C7b4504669602a82f5 | ---      |
