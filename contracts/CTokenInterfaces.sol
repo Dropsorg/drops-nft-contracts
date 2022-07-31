@@ -304,6 +304,25 @@ abstract contract CErc721Interface is CErc721Storage {
     function _addReserves(uint addAmount) external virtual returns (uint);
 }
 
+contract CErc721MigrationStorage {
+    /**
+     * @notice Old version asset for this CToken
+     */
+    address public migration;
+}
+
+abstract contract CErc721MigrationInterface is CErc721MigrationStorage {
+
+    /*** User Interface ***/
+
+    function migrate() external virtual returns (uint);
+
+
+    /*** Admin Functions ***/
+
+    function _setMigration(address migration_) external virtual;
+}
+
 contract CDelegationStorage {
     /**
      * @notice Implementation address for this contract

@@ -9,12 +9,17 @@ interface ICERC721 {
     function transferFrom(address from, address to, uint256 tokenId) external;
 }
 
+abstract contract CErc721ArtBlocks is CTokenEx {
+    // ArtBlocks Project ID
+    uint256 public projectId;
+}
+
 /**
  * @title Drops's CErc721 Contract (Modified from "Compound's CErc20 Contract")
  * @notice CTokens which wrap an EIP-721 underlying
  * @author Drops Loan
  */
-contract CErc721 is CTokenEx, CErc721Interface {
+contract CTokenArtBlocks is CErc721ArtBlocks, CErc721Interface {
 
     /**
      * @notice Initialize the new money market
@@ -32,13 +37,17 @@ contract CErc721 is CTokenEx, CErc721Interface {
                         uint initialExchangeRateMantissa_,
                         string memory name_,
                         string memory symbol_,
-                        uint8 decimals_) public {
+                        uint8 decimals_,
+                        uint256 projectId_) public {
         // CToken initialize does the bulk of the work
         super.initialize(comptroller_, interestRateModel_, initialExchangeRateMantissa_, name_, symbol_, decimals_);
 
         // Set underlying and sanity check it
         underlying = underlying_;
         EIP20Interface(underlying).totalSupply();
+
+        // ArtBlocks Project ID
+        projectId = projectId_;
     }
 
     /*** User Interface ***/
@@ -174,7 +183,7 @@ contract CErc721 is CTokenEx, CErc721Interface {
      * @dev This excludes the value of the current message, if any
      * @return The quantity of underlying tokens owned by this contract
      */
-    function getCashPrior() internal view virtual override returns (uint) {
+    function getCashPrior() internal view override returns (uint) {
         ICERC721 token = ICERC721(underlying);
         return token.balanceOf(address(this));
     }
@@ -189,7 +198,10 @@ contract CErc721 is CTokenEx, CErc721Interface {
      *            See here: https://medium.com/coinmonks/missing-return-value-bug-at-least-130-tokens-affected-d67bf08521ca
      */
     function doTransferIn(address from, uint tokenId) internal override returns (uint) {
+        // TokenID needs te be in Project Range
+        require((tokenId / 1_000_000) == projectId, "Invalid range");
         ICERC721 token = ICERC721(underlying);
+
         uint balanceBefore = token.balanceOf(address(this));
         token.transferFrom(from, address(this), tokenId);
         userTokens[from].push(tokenId);

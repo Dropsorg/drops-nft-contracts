@@ -2,7 +2,11 @@
 
 pragma solidity 0.6.12;
 
-import "./CTokenEx.sol";
+import "./CErc721Virtual.sol";
+
+interface IFlashClaimer {
+    function onFlashClaim(address user, uint256 tokenId) external;
+}
 
 interface ICERC721Moonbird {
     function balanceOf(address owner) external view returns (uint256 balance);
@@ -11,7 +15,7 @@ interface ICERC721Moonbird {
     function safeTransferWhileNesting(address from, address to, uint256 tokenId) external;
 }
 
-abstract contract CErc721Moonbird is CTokenEx {
+contract CErc721MoonbirdStorage {
     // Reserve tokenId per Supply
     mapping(uint256 => address) internal reserves;
 }
@@ -21,7 +25,7 @@ abstract contract CErc721Moonbird is CTokenEx {
  * @notice CTokens which wrap an EIP-721 underlying
  * @author Drops Loan
  */
-contract CTokenMoonbird is CErc721Moonbird, CErc721Interface {
+contract CErc721Moonbird is CErc721Virtual, CErc721MigrationInterface, CErc721MoonbirdStorage {
 
     /**
      * @notice Initialize the new money market
@@ -39,151 +43,13 @@ contract CTokenMoonbird is CErc721Moonbird, CErc721Interface {
                         uint initialExchangeRateMantissa_,
                         string memory name_,
                         string memory symbol_,
-                        uint8 decimals_) public {
+                        uint8 decimals_) public override {
         // CToken initialize does the bulk of the work
         super.initialize(comptroller_, interestRateModel_, initialExchangeRateMantissa_, name_, symbol_, decimals_);
 
         // Set underlying and sanity check it
         underlying = underlying_;
         EIP20Interface(underlying).totalSupply();
-    }
-
-    /*** User Interface ***/
-
-    /**
-     * @notice Sender supplies assets into the market and receives cTokens in exchange
-     * @dev Accrues interest whether or not the operation succeeds, unless reverted
-     * @param mintAmount The amount of the underlying asset to supply
-     * @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)
-     */
-    // function mint(uint mintAmount) external override returns (uint) {
-    //     (uint err,) = mintInternal(mintAmount);
-    //     return err;
-    // }
-
-    /**
-     * @notice Sender supplies assets into the market and receives cTokens in exchange
-     * @dev Accrues interest whether or not the operation succeeds, unless reverted
-     * @param tokenId The amount of the underlying asset to supply
-     * @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)
-     */
-    function mint(uint tokenId) external override returns (uint) {
-        (uint err,) = mintInternal(tokenId);
-        return err;
-    }
-    function mints(uint[] calldata tokenIds) external override returns (uint[] memory) {
-        uint amount = tokenIds.length;
-        uint[] memory errs = new uint[](amount);
-        for (uint i = 0; i < amount; i++) {
-            (errs[i],) = mintInternal(tokenIds[i]);
-        }
-        return errs;
-    }
-
-    /**
-     * @notice Sender redeems cTokens in exchange for the underlying asset
-     * @dev Accrues interest whether or not the operation succeeds, unless reverted
-     * @param redeemTokenId The number of cTokens to redeem into underlying
-     * @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)
-     */
-    function redeem(uint redeemTokenId) external override returns (uint) {
-        return redeemInternal(redeemTokenId);
-    }
-    function redeems(uint[] calldata redeemTokenIds) external override returns (uint[] memory) {
-        uint amount = redeemTokenIds.length;
-        uint[] memory errs = new uint[](amount);
-        for (uint i = 0; i < amount; i++) {
-            errs[i] = redeemInternal(redeemTokenIds[i]);
-        }
-        return errs;
-    }
-
-    /**
-     * @notice Sender redeems cTokens in exchange for a specified amount of underlying asset
-     * @dev Accrues interest whether or not the operation succeeds, unless reverted
-     * @param redeemAmount The amount of underlying to redeem
-     * @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)
-     */
-    function redeemUnderlying(uint redeemAmount) external override returns (uint) {
-        return redeemUnderlyingInternal(redeemAmount);
-    }
-
-    /**
-      * @notice Sender borrows assets from the protocol to their own address
-      * @param borrowAmount The amount of the underlying asset to borrow
-      * @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)
-      */
-    function borrow(uint borrowAmount) external override returns (uint) {
-        require(false);
-        return borrowInternal(borrowAmount);
-    }
-
-    /**
-     * @notice Sender repays their own borrow
-     * @param repayAmount The amount to repay
-     * @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)
-     */
-    function repayBorrow(uint repayAmount) external override returns (uint) {
-        require(false);
-        (uint err,) = repayBorrowInternal(repayAmount);
-        return err;
-    }
-
-    /**
-     * @notice Sender repays a borrow belonging to borrower
-     * @param borrower the account with the debt being payed off
-     * @param repayAmount The amount to repay
-     * @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)
-     */
-    function repayBorrowBehalf(address borrower, uint repayAmount) external override returns (uint) {
-        require(false);
-        (uint err,) = repayBorrowBehalfInternal(borrower, repayAmount);
-        return err;
-    }
-
-    /**
-     * @notice The sender liquidates the borrowers collateral.
-     *  The collateral seized is transferred to the liquidator.
-     * @param borrower The borrower of this cToken to be liquidated
-     * @param repayAmount The amount of the underlying borrowed asset to repay
-     * @param cTokenCollateral The market in which to seize collateral from the borrower
-     * @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)
-     */
-    function liquidateBorrow(address borrower, uint repayAmount, CTokenInterface cTokenCollateral) external override returns (uint) {
-        require(false);
-        (uint err,) = liquidateBorrowInternal(borrower, repayAmount, cTokenCollateral);
-        return err;
-    }
-
-    /**
-     * @notice A public function to sweep accidental ERC-20 transfers to this contract. Tokens are sent to admin (timelock)
-     * @param token The address of the ERC-20 token to sweep
-     */
-    function sweepToken(EIP20NonStandardInterface token) external {
-    	require(address(token) != underlying, "CErc20::sweepToken: can not sweep underlying token");
-    	uint256 balance = token.balanceOf(address(this));
-    	token.transfer(admin, balance);
-    }
-
-    /**
-     * @notice The sender adds to reserves.
-     * @param addAmount The amount fo underlying token to add as reserves
-     * @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)
-     */
-    function _addReserves(uint addAmount) external override returns (uint) {
-        return _addReservesInternal(addAmount);
-    }
-
-    /*** Safe Token ***/
-
-    /**
-     * @notice Gets balance of this contract in terms of the underlying
-     * @dev This excludes the value of the current message, if any
-     * @return The quantity of underlying tokens owned by this contract
-     */
-    function getCashPrior() internal view override returns (uint) {
-        ICERC721Moonbird token = ICERC721Moonbird(underlying);
-        return token.balanceOf(address(this));
     }
 
     function mintInternalTo(address to, uint tokenId) internal nonReentrant returns (uint, uint) {
@@ -292,17 +158,98 @@ contract CTokenMoonbird is CErc721Moonbird, CErc721Interface {
         // require(success, "TOKEN_TRANSFER_OUT_FAILED");
     }
 
-    function doTransfer(address from, address to, uint tokenIndex) internal override {
-        // doTransferOut
-        uint newBalance = userTokens[from].length - 1;
-        require(tokenIndex <= newBalance);
-        uint tokenId = userTokens[from][tokenIndex];
-        if (tokenIndex < newBalance) {
-            userTokens[from][tokenIndex] = userTokens[from][newBalance];
-        }
-        userTokens[from].pop();
+    /**
+     * @notice Gets balance of this contract in terms of the underlying
+     * @dev This excludes the value of the current message, if any
+     * @return The quantity of underlying tokens owned by this contract
+     */
+    function getCashPrior() internal view virtual override returns (uint) {
+        // [2022.7.15] - cash to `totalySupply`
+        // ISSUE - NFT transfer can cause exchangeRate changed
+        return totalSupply;
 
-        // doTransferIn
-        userTokens[to].push(tokenId);
+        // [COMMENT] - original code
+        // ICERC721 token = ICERC721(underlying);
+        // return token.balanceOf(address(this));
+    }
+
+    function flashClaim(uint256 tokenIndex, address claimer) external {
+        address user = msg.sender;
+        require(tx.origin == user, "Invalid owner");
+        uint256 tokenId = userTokens[user][tokenIndex];
+
+        ICERC721(underlying).transferFrom(address(this), claimer, tokenId);
+        IFlashClaimer(claimer).onFlashClaim(user, tokenId);
+        ICERC721(underlying).transferFrom(claimer, address(this), tokenId);
+    }
+
+    function migrate() external virtual override returns (uint) {
+        uint error = accrueInterest();
+        if (error != uint(Error.NO_ERROR)) {
+            // accrueInterest emits logs on errors, but we still want to log the fact that an attempted borrow failed
+            return fail(Error(error), FailureInfo.MINT_ACCRUE_INTEREST_FAILED);
+        }
+
+        address minter = msg.sender;
+        uint256 mintAmount = CErc721Virtual(migration).balanceOf(minter);
+
+        for (uint256 i = 0; i < mintAmount; i++) {
+            userTokens[minter].push(CErc721Virtual(migration).userTokens(minter, i));
+        }
+
+        /* Fail if mint not allowed */
+        uint allowed = comptroller.mintAllowed(address(this), minter, mintAmount);
+        if (allowed != 0) {
+            return failOpaque(Error.COMPTROLLER_REJECTION, FailureInfo.MINT_COMPTROLLER_REJECTION, allowed);
+        }
+
+        /* Verify market's block number equals current block number */
+        if (accrualBlockNumber != getBlockNumber()) {
+            return fail(Error.MARKET_NOT_FRESH, FailureInfo.MINT_FRESHNESS_CHECK);
+        }
+
+        MintLocalVars memory vars;
+
+        (vars.mathErr, vars.exchangeRateMantissa) = exchangeRateStoredInternal();
+        if (vars.mathErr != MathError.NO_ERROR) {
+            return failOpaque(Error.MATH_ERROR, FailureInfo.MINT_EXCHANGE_RATE_READ_FAILED, uint(vars.mathErr));
+        }
+
+        // vars.actualMintAmount = doTransferIn(minter, tokenId);
+        vars.actualMintAmount = mintAmount;
+
+        (vars.mathErr, vars.mintTokens) = divScalarByExpTruncate(vars.actualMintAmount, Exp({mantissa: vars.exchangeRateMantissa}));
+        require(vars.mathErr == MathError.NO_ERROR, "MINT_EXCHANGE_CALCULATION_FAILED");
+
+        (vars.mathErr, vars.totalSupplyNew) = addUInt(totalSupply, vars.mintTokens);
+        require(vars.mathErr == MathError.NO_ERROR, "MINT_NEW_TOTAL_SUPPLY_CALCULATION_FAILED");
+
+        (vars.mathErr, vars.accountTokensNew) = addUInt(accountTokens[minter], vars.mintTokens);
+        require(vars.mathErr == MathError.NO_ERROR, "MINT_NEW_ACCOUNT_BALANCE_CALCULATION_FAILED");
+
+        /* We write previously calculated values into storage */
+        totalSupply = vars.totalSupplyNew;
+        accountTokens[minter] = vars.accountTokensNew;
+
+        /* We emit a Mint event, and a Transfer event */
+        emit Mint(minter, vars.actualMintAmount, vars.mintTokens);
+        emit Transfer(address(this), minter, vars.mintTokens);
+
+        /* We call the defense hook */
+        comptroller.mintVerify(address(this), minter, vars.actualMintAmount, vars.mintTokens);
+
+        uint256[] memory redeemTokenIds = new uint256[](mintAmount);
+        for (uint256 i = mintAmount; i > 0; i--) {
+            require(CErc721Virtual(migration).transferFrom(minter, address(this), i - 1), "Transfer dToken failed");
+            redeemTokenIds[mintAmount - i] = i - 1;
+        }
+        CErc721Virtual(migration).redeems(redeemTokenIds);
+
+        return uint(Error.NO_ERROR);
+    }
+
+    function _setMigration(address migration_) external virtual override {
+        require(msg.sender == admin, "Invalid admin");
+        migration = migration_;
     }
 }

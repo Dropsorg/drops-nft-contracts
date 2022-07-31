@@ -14,7 +14,7 @@ interface ICERC721 {
  * @notice CTokens which wrap an EIP-721 underlying
  * @author Drops Loan
  */
-contract CErc721 is CTokenEx, CErc721Interface {
+contract CErc721Virtual is CTokenEx, CErc721Interface {
 
     /**
      * @notice Initialize the new money market
@@ -32,7 +32,7 @@ contract CErc721 is CTokenEx, CErc721Interface {
                         uint initialExchangeRateMantissa_,
                         string memory name_,
                         string memory symbol_,
-                        uint8 decimals_) public {
+                        uint8 decimals_) public virtual {
         // CToken initialize does the bulk of the work
         super.initialize(comptroller_, interestRateModel_, initialExchangeRateMantissa_, name_, symbol_, decimals_);
 
@@ -188,7 +188,7 @@ contract CErc721 is CTokenEx, CErc721Interface {
      *      Note: This wrapper safely handles non-standard ERC-20 tokens that do not return a value.
      *            See here: https://medium.com/coinmonks/missing-return-value-bug-at-least-130-tokens-affected-d67bf08521ca
      */
-    function doTransferIn(address from, uint tokenId) internal override returns (uint) {
+    function doTransferIn(address from, uint tokenId) internal virtual override returns (uint) {
         ICERC721 token = ICERC721(underlying);
         uint balanceBefore = token.balanceOf(address(this));
         token.transferFrom(from, address(this), tokenId);
@@ -225,7 +225,7 @@ contract CErc721 is CTokenEx, CErc721Interface {
      *      Note: This wrapper safely handles non-standard ERC-20 tokens that do not return a value.
      *            See here: https://medium.com/coinmonks/missing-return-value-bug-at-least-130-tokens-affected-d67bf08521ca
      */
-    function doTransferOut(address payable to, uint tokenIndex) internal override {
+    function doTransferOut(address payable to, uint tokenIndex) internal virtual override {
         ICERC721 token = ICERC721(underlying);
         uint tokenId = userTokens[to][tokenIndex];
         uint newBalance = userTokens[to].length - 1;
@@ -250,7 +250,7 @@ contract CErc721 is CTokenEx, CErc721Interface {
         // require(success, "TOKEN_TRANSFER_OUT_FAILED");
     }
 
-    function doTransfer(address from, address to, uint tokenIndex) internal override {
+    function doTransfer(address from, address to, uint tokenIndex) internal virtual override {
         // doTransferOut
         uint newBalance = userTokens[from].length - 1;
         require(tokenIndex <= newBalance);
