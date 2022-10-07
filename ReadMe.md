@@ -61,6 +61,11 @@
 | CompoundLens | 0xF6d2f3c7AD334FbABc3264FC733962e5ceA65F5A | ---      |
 | Oracle       | 0x97ffEaCd62bdeA0b6E3B167FFd3cc25f8A8fc47f | ---      |
 | D3-ETH       | 0x05231980914B702083B9Ac08002325654F6eb95B | ---      |
+| D3-WOW       | 0x47919d0b513c88e6ddfeead4ea0729c08003daee | ---      |
+| D3-COOL      | 0x5a5d79e75016330f8b2a02b4f33b5e12003a63d7 | ---      |
+| D3-NOUN      | 0x5ce3d90e359a0f5e841ac8696e736e6ebf8bf2f0 | ---      |
+| D3-VFT       | 0x780f467401430632ed0529f497c20806b2793dff | ---      |
+| D3-PPG       | 0xda8c9777febab8577a33f4750d165bc13b07b93d | ---      |
 
 ### 5. Pool 4
 
