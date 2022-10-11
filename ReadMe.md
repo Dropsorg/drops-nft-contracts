@@ -28,6 +28,7 @@
 | Comptroller  | 0xB70FB69a522ed8D4613C4C720F91F93a836EE2f5 | Deployer |
 | CompoundLens | 0x8d8ba7d538AC8df023a05AFe5Ced796a3dc14E09 | ---      |
 | Oracle       | 0x79B994AeA4Fd6Dea9b6EE807c2704Fa36219b5f6 | ---      |
+| Interest     | 0x8edC559E4fcA946270054118fA8595A44Ea88dc0 | ---      |
 | D1-ETH       | 0xD72929e284E8bc2f7458A6302bE961B91bccB339 | ---      |
 | D1-USDC      | 0x7489c6BaAba57d9a431642b26E034aCD191039f7 | ---      |
 | D1-BAYC      | 0xC3D8e1fD31e55EDe71aE1453dDf858461E23B59a | ---      |
@@ -50,6 +51,7 @@
 | Comptroller     | 0x9dEb56b9DD04822924B90ad15d01EE50415f8bC7 | Deployer |
 | CompoundLens    | 0x9eD3F27fE1D070b329fFD7B7d3A5Ce176D845884 | ---      |
 | Oracle          | 0xdA12A24515E4BA722103A8FF648ba11fAF7992E1 | ---      |
+| Interest        | 0x6C89A328217b507CA6E52bbD3da78f6ca57172Db | ---      |
 | D2-ETH          | 0x0a1EF7feD1B691253F9367daf682BA08A9D2fD9C | ---      |
 | D2-CYBERBROKERS | 0x83355362ebb2180873844523044c866170f9D99C | ---      |
 
@@ -60,6 +62,7 @@
 | Comptroller  | 0x7312a3bc8733b068989ef44bac6344f07cfcde7f | Deployer |
 | CompoundLens | 0xF6d2f3c7AD334FbABc3264FC733962e5ceA65F5A | ---      |
 | Oracle       | 0x97ffEaCd62bdeA0b6E3B167FFd3cc25f8A8fc47f | ---      |
+| Interest     | 0x8edC559E4fcA946270054118fA8595A44Ea88dc0 | ---      |
 | D3-ETH       | 0x05231980914B702083B9Ac08002325654F6eb95B | ---      |
 | D3-WOW       | 0x47919d0b513c88e6ddfeead4ea0729c08003daee | ---      |
 | D3-COOL      | 0x5a5d79e75016330f8b2a02b4f33b5e12003a63d7 | ---      |
@@ -74,5 +77,9 @@
 | Comptroller  | 0x3903E6EcD8bc610D5a01061B1Dc31affD21F81C6 | Deployer |
 | CompoundLens | 0xd846430a1Af51349Ef6D0840E0d32431F564b979 | ---      |
 | Oracle       | 0xfde76511A27A7a5b8C802E5Fda14CC0F879bC2C6 | ---      |
+| Interest     | 0x6C89A328217b507CA6E52bbD3da78f6ca57172Db | ---      |
 | D4-ETH       | 0x588C13e685e44B22DC6647937481C816E5FeE086 | ---      |
 | D4-SQUIGGLES | 0x30C40201f7Af91C1B1EeF6C7b4504669602a82f5 | ---      |
+
+
+
