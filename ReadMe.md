@@ -62,7 +62,7 @@
 | Comptroller  | 0x7312a3bc8733b068989ef44bac6344f07cfcde7f | Deployer |
 | CompoundLens | 0xF6d2f3c7AD334FbABc3264FC733962e5ceA65F5A | ---      |
 | Oracle       | 0x97ffEaCd62bdeA0b6E3B167FFd3cc25f8A8fc47f | ---      |
-| Interest     | 0x8edC559E4fcA946270054118fA8595A44Ea88dc0 | ---      |
+| Interest     | 0x3eec9c4b75c34a517b188feb4ab58defaeb3f35d | ---      |
 | D3-ETH       | 0x05231980914B702083B9Ac08002325654F6eb95B | ---      |
 | D3-WOW       | 0x47919d0b513c88e6ddfeead4ea0729c08003daee | ---      |
 | D3-COOL      | 0x5a5d79e75016330f8b2a02b4f33b5e12003a63d7 | ---      |
@@ -77,7 +77,7 @@
 | Comptroller  | 0x3903E6EcD8bc610D5a01061B1Dc31affD21F81C6 | Deployer |
 | CompoundLens | 0xd846430a1Af51349Ef6D0840E0d32431F564b979 | ---      |
 | Oracle       | 0xfde76511A27A7a5b8C802E5Fda14CC0F879bC2C6 | ---      |
-| Interest     | 0x6C89A328217b507CA6E52bbD3da78f6ca57172Db | ---      |
+| Interest     | 0x432a4A206Dd01b0cd51170f601EEBa824B1f0B61 | ---      |
 | D4-ETH       | 0x588C13e685e44B22DC6647937481C816E5FeE086 | ---      |
 | D4-SQUIGGLES | 0x30C40201f7Af91C1B1EeF6C7b4504669602a82f5 | ---      |
 
