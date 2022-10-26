@@ -55,6 +55,9 @@
 | Interest        | 0x6C89A328217b507CA6E52bbD3da78f6ca57172Db | ---      |
 | D2-ETH          | 0x0a1EF7feD1B691253F9367daf682BA08A9D2fD9C | ---      |
 | D2-CYBERBROKERS | 0x83355362ebb2180873844523044c866170f9D99C | ---      |
+| D2-GOBLIN       | 0x65DA0A824269E43A2Fc9586Ef2fFE2aE722C33Be | ---      |
+| D2-LOBS         | 0xCE072AAAEE46FDb3B0aA0Be0516b9491aD88eC57 | ---      |
+| D2-TOADZ        | 0xe9e374ef997d9ee38d705cabac5b94f469506966 | ---      |
 
 ### 4. Pool 3
 
