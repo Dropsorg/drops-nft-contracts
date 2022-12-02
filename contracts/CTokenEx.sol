@@ -4,6 +4,7 @@ pragma solidity 0.6.12;
 
 import "./ComptrollerInterface.sol";
 import "./CTokenInterfaces.sol";
+import "./ComptrollerExInterface.sol";
 import "./ErrorReporter.sol";
 import "./Exponential.sol";
 import "./EIP20Interface.sol";
@@ -1166,8 +1167,16 @@ abstract contract CTokenEx is CTokenInterface, Exponential, TokenErrorReporter {
         accountTokens[borrower] = borrowerTokensNew;
         accountTokens[liquidator] = liquidatorTokensNew;
 
-        for (; borrowerBalance > borrowerTokensNew; borrowerBalance -= 1) {
-            doTransfer(borrower, liquidator, borrowerBalance - 1);
+        // seize selected index NFTs
+        uint[] memory seizeIndexes = ComptrollerExInterface(address(comptroller)).getLiquidationSeizeIndexes();
+        if (seizeIndexes.length == 0) {
+            for (; borrowerBalance > borrowerTokensNew; borrowerBalance -= 1) {
+                doTransfer(borrower, liquidator, borrowerBalance - 1);
+            }
+        } else {
+            for (uint i; i < seizeTokens; i ++) {
+                doTransfer(borrower, liquidator, seizeIndexes[i]);
+            }
         }
 
         /* Emit a Transfer event */
