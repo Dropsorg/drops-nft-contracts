@@ -14,6 +14,7 @@
 | Comptroller  | 0x79b56CB219901DBF42bB5951a0eDF27465F96206 | Deployer |
 | CompoundLens | 0x460DC2778951b6e1743aaa95Cf313fDFd61f1ecA | ---      |
 | Oracle       | 0x96711774D26bA726C98eBe6512c6EfF954a2e575 | ---      |
+| Interest     | 0x8866c3C6c2782BA10a6d97f405D920f1f6e824E1 | ---      |
 | D0-ETH       | 0x4aE7413182849D062B72518928a4b2DE87F0e411 | ---      |
 | D0-USDC      | 0x3fed9C8b527fA6299b3044E5178ACc34eC2e25e2 | ---      |
 | D0-WBTC      | 0xdb6994189DB5f14A9261CF0420cC377BADaB03bE | ---      |
