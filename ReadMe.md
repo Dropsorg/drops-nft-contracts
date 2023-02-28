@@ -70,7 +70,7 @@
 
 | Contract         | Address                                    | Owner    |
 | ---------------- | ------------------------------------------ | -------- |
-| Comptroller      | 0x7312a3bc8733b068989ef44bac6344f07cfcde7f | Deployer |
+| Comptroller      | 0x7312a3bc8733b068989ef44bac6344f07cfcde7f | mltsg1   |
 | Oracle           | 0x97ffEaCd62bdeA0b6E3B167FFd3cc25f8A8fc47f | ---      |
 | Interest         | 0x3EeC9C4B75C34A517b188feb4aB58DEFaeb3F35d | ---      |
 | D3-ETH           | 0x05231980914B702083B9Ac08002325654F6eb95B | ---      |
