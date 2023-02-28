@@ -1,8 +1,9 @@
-# Drops NFT Loans
+# DropsDAO
 
 ## Multisig (Gnosis Safe)
 
-- [Coming soon...](https://gnosis-safe.io/app)
+- Multisig 1 0xCF67F232aB46Ea065052bBB3E34eEE37bCD79e2d
+- Multisig 2
 - [deployer:0xd1F60eBec593289daBA5F5eCba16a906f9d7A8BC](https://etherscan.io/address/0xd1f60ebec593289daba5f5ecba16a906f9d7a8bc)
 
 ## Contracts
@@ -11,7 +12,7 @@
 
 | Contract     | Address                                    | Owner    |
 | ------------ | ------------------------------------------ | -------- |
-| Comptroller  | 0x79b56CB219901DBF42bB5951a0eDF27465F96206 | Deployer |
+| Comptroller  | 0x79b56CB219901DBF42bB5951a0eDF27465F96206 | mltsg1   |
 | CompoundLens | 0x460DC2778951b6e1743aaa95Cf313fDFd61f1ecA | ---      |
 | Oracle       | 0x96711774D26bA726C98eBe6512c6EfF954a2e575 | ---      |
 | Interest     | 0x8866c3C6c2782BA10a6d97f405D920f1f6e824E1 | ---      |
@@ -26,7 +27,7 @@
 
 | Contract         | Address                                    | Owner    |
 | ---------------- | ------------------------------------------ | -------- |
-| Comptroller      | 0xB70FB69a522ed8D4613C4C720F91F93a836EE2f5 | Deployer |
+| Comptroller      | 0xB70FB69a522ed8D4613C4C720F91F93a836EE2f5 | mltsg1   |
 | Oracle           | 0x79B994AeA4Fd6Dea9b6EE807c2704Fa36219b5f6 | ---      |
 | Interest         | 0x8edC559E4fcA946270054118fA8595A44Ea88dc0 | ---      |
 | D1-ETH           | 0xD72929e284E8bc2f7458A6302bE961B91bccB339 | ---      |
@@ -50,7 +51,7 @@
 
 | Contract         | Address                                    | Owner    |
 | ---------------- | ------------------------------------------ | -------- |
-| Comptroller      | 0x9dEb56b9DD04822924B90ad15d01EE50415f8bC7 | Deployer |
+| Comptroller      | 0x9dEb56b9DD04822924B90ad15d01EE50415f8bC7 | mltsg1   |
 | Interest         | 0x6C89A328217b507CA6E52bbD3da78f6ca57172Db | ---      |
 | Oracle           | 0xdA12A24515E4BA722103A8FF648ba11fAF7992E1 | ---      |
 | D2-ETH           | 0x0a1EF7feD1B691253F9367daf682BA08A9D2fD9C | ---      |
@@ -87,7 +88,7 @@
 
 | Contract         | Address                                    | Owner    |
 | ---------------- | ------------------------------------------ | -------- |
-| Comptroller      | 0x3903E6EcD8bc610D5a01061B1Dc31affD21F81C6 | Deployer |
+| Comptroller      | 0x3903E6EcD8bc610D5a01061B1Dc31affD21F81C6 | mltsg1   |
 | Interest         | 0x432a4A206Dd01b0cd51170f601EEBa824B1f0B61 | ---      |
 | Oracle           | 0xfde76511A27A7a5b8C802E5Fda14CC0F879bC2C6 | ---      |
 | D4-ETH           | 0x588C13e685e44B22DC6647937481C816E5FeE086 | ---      |
@@ -100,7 +101,7 @@
 
 | Contract         | Address                                    | Owner    |
 | ---------------- | ------------------------------------------ | -------- |
-| Comptroller      | 0x896b8019f5ea3caaAb23cDA0A09B405ed8361E8b | Deployer |
+| Comptroller      | 0x896b8019f5ea3caaAb23cDA0A09B405ed8361E8b | mltsg2   |
 | Interest         | 0x8866c3C6c2782BA10a6d97f405D920f1f6e824E1 | ---      |
 | Oracle           | 0x6734a196b66E21884C115f54dD7e28Ee5C23678d | ---      |
 | D5-ETH           | 0x777ECcD3fCf4FfA3b12f45a384852608DF2619a0 | ---      |
