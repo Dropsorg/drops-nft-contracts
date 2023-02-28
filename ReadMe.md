@@ -1,10 +1,9 @@
 # DropsDAO
 
-## Multisig (Gnosis Safe)
+## Multisig
 
 - Multisig 1 0xCF67F232aB46Ea065052bBB3E34eEE37bCD79e2d
 - Multisig 2
-- [deployer:0xd1F60eBec593289daBA5F5eCba16a906f9d7A8BC](https://etherscan.io/address/0xd1f60ebec593289daba5f5ecba16a906f9d7a8bc)
 
 ## Contracts
 
