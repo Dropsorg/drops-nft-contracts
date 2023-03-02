@@ -94,6 +94,8 @@
 | D4-USDC          | 0xE7D7B65DBe5577d9DA4286367031F5BcCB020674 | mltsg1   |
 | D4-FRAX          | 0xf00de3d44228856b2ca1d4550c2eacba153daca7 | mltsg1   |
 | D4-SQUIGGLES     | 0x30C40201f7Af91C1B1EeF6C7b4504669602a82f5 | mltsg1   |
+| D4-RINGERS       | 0xef8f2d14104ce88ad8e1b27c77878c8c9a92bb80 | mltsg1   |
+| D4-FIDENZA       | 0xa0bda1407b2686987a3aae553d2ede657a1d472b | mltsg1   |
 | LiquidationProxy | 0x6b724474f3DE82FE4D37001bbe7235eEC1dE6035 | mltsg1   |
 
 ### 6. Pool 5 - Cartel
