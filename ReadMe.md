@@ -100,6 +100,7 @@
 | D4-SQUIGGLES     | 0x30C40201f7Af91C1B1EeF6C7b4504669602a82f5 | mltsg1   |
 | D4-RINGERS       | 0xef8f2d14104ce88ad8e1b27c77878c8c9a92bb80 | mltsg1   |
 | D4-FIDENZA       | 0x21897f9694D94F7F3ddCf60FD32b14DB55376b00 | mltsg1   |
+| D4-xSQGL         | 0x8B7cfB541cCfEBFeADb699C5e70550B165383685 | mltsg1   |
 | LiquidationProxy | 0x6b724474f3DE82FE4D37001bbe7235eEC1dE6035 | mltsg1   |
 
 ### 6. Pool 5 - Cartel
