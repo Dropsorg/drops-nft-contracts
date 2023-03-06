@@ -43,6 +43,8 @@
 | D1-AZUKI         | 0xCfC8AfAC17d92796809a4b38a74A245011a96E83 | ---      |
 | D1-DOODLES       | 0x5c2cBa783f2BE59849ee1B01fFbF1ed768B444e0 | ---      |
 | D1-BAKC          | 0x43244977Fae5ae5e2979533d5F0221D80840Fa1A | ---      |
+| D1-xPUNK         | 0xfba58fddb88203e1d32d0f3e6dbfd9d8b505ec18 | ---      |
+| D1-xMEEB         | 0x8486B523a32e9D0d021078Fe68a3b98fC765FbaB | ---      |
 | LiquidationProxy | 0x11FF91f17E43C2C5C241850d261CaE5Febb9B439 | ---      |
 | fiPUNKS          | 0x458FCD33AD32DE55875578da8cF1248B8765EC95 | ---      |
 
