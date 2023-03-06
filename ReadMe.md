@@ -66,6 +66,8 @@
 | D2-TOADZ         | 0xE9E374eF997D9ee38D705caBAC5B94f469506966 | ---      |
 | D2-WIZARDS       | 0x777a91c5E1CAE1533e32Fe8eD5667022A1E0fbB6 | ---      |
 | D2-MILADY        | 0x5daabd53214046c108bddc91766fffee9397cee4 | ---      |
+| D2-xMILADY       | 0x67c06bc0E1C1c4E4617cd293D1F3bcB39244A859 | ---      |
+| D2-xWIZARD       | 0xF19e040255f3842c009237e0be5A73283371C8df | ---      |
 | LiquidationProxy | 0xfaD844e28b309269bF7D11A7BC6B2ed993175598 | ---      |
 
 ### 4. Pool 3 - Sea
