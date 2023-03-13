@@ -31,7 +31,7 @@
 | Interest         | 0x8edC559E4fcA946270054118fA8595A44Ea88dc0 | ---      |
 | D1-ETH           | 0xD72929e284E8bc2f7458A6302bE961B91bccB339 | ---      |
 | D1-USDC          | 0x7489c6BaAba57d9a431642b26E034aCD191039f7 | ---      |
-| D1-FRAX          | 0x03e1eb147ab39d744565ca1cec4b03106d21fa92 | ---      |
+| D1-FRAX          | 0x03e1eb147ab39d744565ca1cec4b03106d21fa92 | mltsg1   |
 | D1-BAYC          | 0xC3D8e1fD31e55EDe71aE1453dDf858461E23B59a | ---      |
 | D1-fiPUNKS       | 0x3786f8ab0a0652e23c6503a9a44322b3295608fe | ---      |
 | D1-MAYC          | 0x397a7E7710F3a074dA1B6823E94047E57A5db896 | ---      |
@@ -56,8 +56,8 @@
 | Interest         | 0x6C89A328217b507CA6E52bbD3da78f6ca57172Db | ---      |
 | Oracle           | 0xdA12A24515E4BA722103A8FF648ba11fAF7992E1 | ---      |
 | D2-ETH           | 0x0a1EF7feD1B691253F9367daf682BA08A9D2fD9C | ---      |
-| D2-USDC          | 0xDf55F91f8f13F6b3754bf07C6eBDF16C99f83198 | ---      |
-| D2-FRAX          | 0x140128b2e6562713051df4858ff52f26795b8920 | ---      |
+| D2-USDC          | 0xDf55F91f8f13F6b3754bf07C6eBDF16C99f83198 | mltsg1   |
+| D2-FRAX          | 0x140128b2e6562713051df4858ff52f26795b8920 | mltsg1   |
 | D2-CYBERBROKERS  | 0x83355362ebb2180873844523044c866170f9D99C | ---      |
 | D2-BEANZ         | 0xe63D394953908c3EDA007Cf4A94F9352Bb22dEC0 | ---      |
 | D2-CBD           | 0xB589a8E4D5c47B721fd7e3dEF994c819Ab8718C4 | ---      |
@@ -77,8 +77,8 @@
 | Comptroller      | 0x7312a3bc8733b068989ef44bac6344f07cfcde7f | mltsg1   |
 | Oracle           | 0x97ffEaCd62bdeA0b6E3B167FFd3cc25f8A8fc47f | ---      |
 | Interest         | 0x3EeC9C4B75C34A517b188feb4aB58DEFaeb3F35d | mltsg1   |
-| D3-ETH           | 0x05231980914B702083B9Ac08002325654F6eb95B | ---      |
-| D3-USDC          | 0x0A494b848d4bE5D58B0fde9f80C9b25592a2D3b2 | ---      |
+| D3-ETH           | 0x05231980914B702083B9Ac08002325654F6eb95B | mltsg1   |
+| D3-USDC          | 0x0A494b848d4bE5D58B0fde9f80C9b25592a2D3b2 | mltsg1   |
 | D3-FRAX          | 0x0039fec5e1d91741e251d82d9e83859c8e79013d | ---      |
 | D3-COOL          | 0x5A5D79e75016330F8b2a02B4f33b5E12003a63D7 | ---      |
 | D3-NOUN          | 0x5Ce3d90E359A0F5e841ac8696e736E6EBF8bf2f0 | ---      |
