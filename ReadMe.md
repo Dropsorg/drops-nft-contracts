@@ -45,6 +45,8 @@
 | D1-BAKC          | 0x43244977Fae5ae5e2979533d5F0221D80840Fa1A | ---      |
 | D1-xPUNK         | 0xfba58fddb88203e1d32d0f3e6dbfd9d8b505ec18 | ---      |
 | D1-xMEEB         | 0x8486B523a32e9D0d021078Fe68a3b98fC765FbaB | ---      |
+| D2-xPUNKWETH     | 0x3724891050b8b6F9D0B889Ec1B9c89E1673E3f5a | ---      |
+| D2-xMEEBWETH     | 0xd4224B4f05067278221f1651e07a2aa5Ca39590E | ---      |
 | LiquidationProxy | 0x11FF91f17E43C2C5C241850d261CaE5Febb9B439 | ---      |
 | fiPUNKS          | 0x458FCD33AD32DE55875578da8cF1248B8765EC95 | ---      |
 
@@ -68,6 +70,8 @@
 | D2-MILADY        | 0x5daabd53214046c108bddc91766fffee9397cee4 | ---      |
 | D2-xMILADY       | 0x67c06bc0E1C1c4E4617cd293D1F3bcB39244A859 | ---      |
 | D2-xWIZARD       | 0xF19e040255f3842c009237e0be5A73283371C8df | ---      |
+| D2-xMILADYWETH   | 0x09dC75D014876381Ef04D1Ef791Af4318f758eBE | ---      |
+| D2-xWIZARDWETH   | 0x92B9CA3F147B485Dae876AC3585cAaDB58962baF | ---      |
 | LiquidationProxy | 0xfaD844e28b309269bF7D11A7BC6B2ed993175598 | ---      |
 
 ### 4. Pool 3 - Sea
@@ -101,6 +105,7 @@
 | D4-RINGERS       | 0xef8f2d14104ce88ad8e1b27c77878c8c9a92bb80 | mltsg1   |
 | D4-FIDENZA       | 0x21897f9694D94F7F3ddCf60FD32b14DB55376b00 | mltsg1   |
 | D4-xSQGL         | 0x8B7cfB541cCfEBFeADb699C5e70550B165383685 | mltsg1   |
+| D4-xSQGLWETH     | 0x3bFe965147Df3e8BEDf30AD7FE4741bD977f4D06 | mltsg1   |
 | LiquidationProxy | 0x6b724474f3DE82FE4D37001bbe7235eEC1dE6035 | mltsg1   |
 
 ### 6. Pool 5 - Cartel
