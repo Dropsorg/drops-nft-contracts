@@ -110,7 +110,7 @@
 | D4-xSQGLWETH     | 0x3bFe965147Df3e8BEDf30AD7FE4741bD977f4D06 | mltsg1   |
 | LiquidationProxy | 0x6b724474f3DE82FE4D37001bbe7235eEC1dE6035 | mltsg1   |
 
-### 6. Pool 5 - Cartel
+### 6. Pool 5 
 
 | Contract         | Address                                    | Owner    |
 | ---------------- | ------------------------------------------ | -------- |
