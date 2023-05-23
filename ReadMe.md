@@ -3,7 +3,6 @@
 ## Multisig
 
 - Multisig 1 0xCF67F232aB46Ea065052bBB3E34eEE37bCD79e2d
-- Multisig 2
 
 ## Contracts
 
