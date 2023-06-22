@@ -127,3 +127,17 @@
 | D5-BAKC          | 0xE751e2e8dcdcB5Ed043419529ba9311Fa7CCDd3E | ---      |
 | D5-MHC           | 0xedafa6c38ee44810367a77d38d9b99fdafee8513 | ---      |
 | LiquidationProxy | 0xAa95c2d1B3F78e86C41b22f3d202D15200a23E23 | ---      |
+
+### 7. Pool 6 - Positions Pool  
+
+| Contract         | Address                                    | Owner    |
+| ---------------- | ------------------------------------------ | -------- |
+| Comptroller      | 0x874fF8165b7BE829708c70b377df8e3C25bfbE3d | mltsg2   |
+| Interest         | 0x8866c3C6c2782BA10a6d97f405D920f1f6e824E1 | ---      |
+| Oracle           | 0x6734a196b66E21884C115f54dD7e28Ee5C23678d | ---      |
+| D6-yvWETH        | 0x43E927f86D459693d157250340E655f264cbC6EA | ---      |
+| D5-yvUSDC        | 0x23dEBe55E473279Fa8189c22a2c8f08AfbeF39e0 | ---      |
+| D5-yUSDT         | 0x3098780EDdb0233eDF0b1252a721f65D34349A52 | ---      |
+| D5-yvDAI         | 0x4A4e456DA97030721408037673996F3023C3585B | ---      |
+
+
