@@ -132,13 +132,11 @@
 
 | Contract         | Address                                    | Owner    |
 | ---------------- | ------------------------------------------ | -------- |
-| Comptroller      | 0x874fF8165b7BE829708c70b377df8e3C25bfbE3d | mltsg2   |
+| Comptroller      | 0x48E29b9ddbf3fE6380d7D1ec5b415E97afD14AbB | mltsg2   |
 | Interest         | 0x8866c3C6c2782BA10a6d97f405D920f1f6e824E1 | ---      |
-| Oracle           | 0x6734a196b66E21884C115f54dD7e28Ee5C23678d | ---      |
-| D6-yvWETH        | 0x43E927f86D459693d157250340E655f264cbC6EA | ---      |
-| D5-yvUSDC        | 0x23dEBe55E473279Fa8189c22a2c8f08AfbeF39e0 | ---      |
-| D5-yUSDT         | 0x3098780EDdb0233eDF0b1252a721f65D34349A52 | ---      |
-| D5-yvDAI         | 0x4A4e456DA97030721408037673996F3023C3585B | ---      |
-| D5-yvUSDC-mgrt   | 0xA7640072896645f8B5D32C306047713eBF9D60F3 | ---      |
+| Oracle           | 0x24a57ddD412d35c0a9b7c220c3A5af35c1EBF7a7 | ---      |
+| D6-yvWETH        | 0xA3a1A7598060Ac3ca11d7604019F3fFc32bCE7Ec | ---      |
+| D6-A-wstETH-ETH  | 0x1a84831Ac2c42613c6eBb079aE8Bd01335b6207e | ---      |
+
 
 
