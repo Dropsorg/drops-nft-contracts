@@ -139,6 +139,6 @@
 | Oracle           | 0x24a57ddD412d35c0a9b7c220c3A5af35c1EBF7a7 | ---      |
 | D6-yvWETH        | 0xA3a1A7598060Ac3ca11d7604019F3fFc32bCE7Ec | ---      |
 | D6-A-wstETH-ETH  | 0x1a84831Ac2c42613c6eBb079aE8Bd01335b6207e | ---      |
-
+| D6-gOHM          | 0xb97A79FcbC3867Bb68247F5f76359448ed3eBCa3 | ---      |
 
 
