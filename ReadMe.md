@@ -137,8 +137,12 @@
 | Comptroller      | 0x48E29b9ddbf3fE6380d7D1ec5b415E97afD14AbB | mltsg2   |
 | Interest         | 0x8866c3C6c2782BA10a6d97f405D920f1f6e824E1 | ---      |
 | Oracle           | 0x24a57ddD412d35c0a9b7c220c3A5af35c1EBF7a7 | ---      |
-| D6-yvWETH        | 0xA3a1A7598060Ac3ca11d7604019F3fFc32bCE7Ec | ---      |
+| D6-yvUSDC        | 0xA3a1A7598060Ac3ca11d7604019F3fFc32bCE7Ec | ---      |
+| D6-yvDAI         | 0x367144a75577f7FBE80E69854046F6169eF080aC | ---      |
+| D6-yvWETH        | 0x72ab6843D4c988D74Dd8D5cdF16eF49301d87952 | ---      |
+| D6-yvUSDT        | 0xF63f89F6463550Ce4ce5B6Ca6b1323B39C90E9cB | ---      |
 | D6-A-wstETH-ETH  | 0x1a84831Ac2c42613c6eBb079aE8Bd01335b6207e | ---      |
 | D6-gOHM          | 0xb97A79FcbC3867Bb68247F5f76359448ed3eBCa3 | ---      |
+
 
 
