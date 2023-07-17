@@ -144,5 +144,5 @@
 | D6-A-wstETH-ETH           | 0x1a84831Ac2c42613c6eBb079aE8Bd01335b6207e | ---      |
 | D6-A-wstETH-rETH-sfrxETH  | 0xa2EDFd267e9e2f76cd54bD720927a176FAdC19A8 | ---      |
 | D6-A-rETH-WETH            | 0x04a083C48EAAC049964129e5a3eF7d48e0f7a7e7 | ---      |
-| gOHM                      | 0xb97A79FcbC3867Bb68247F5f76359448ed3eBCa3 | ---      |
+| D6-gOHM                   | 0xb97A79FcbC3867Bb68247F5f76359448ed3eBCa3 | ---      |
 
