@@ -148,4 +148,7 @@
 | DAI wrapper               | 0xeF7C610AAfAba339DCd9Cb202bF0940dF95aDE6F | ---      |
 | USDT wrapper              | 0x862B4c1a21958F19C93d1eA1B492C6B7527923CB | ---      |
 | WETH wrapper              | 0x32cF82cD4C1f4d4a5062E9Dac92FF4A9B6304968 | ---      |
+| USDC wrapper              | 0xA7640072896645f8B5D32C306047713eBF9D60F3 | ---      |
+
+
 
