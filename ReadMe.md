@@ -145,4 +145,7 @@
 | D6-A-wstETH-rETH-sfrxETH  | 0xa2EDFd267e9e2f76cd54bD720927a176FAdC19A8 | ---      |
 | D6-A-rETH-WETH            | 0x04a083C48EAAC049964129e5a3eF7d48e0f7a7e7 | ---      |
 | D6-gOHM                   | 0xb97A79FcbC3867Bb68247F5f76359448ed3eBCa3 | ---      |
+| DAI wrapper               | 0xeF7C610AAfAba339DCd9Cb202bF0940dF95aDE6F | ---      |
+| USDT wrapper              | 0x862B4c1a21958F19C93d1eA1B492C6B7527923CB | ---      |
+| WETH wrapper              | 0x32cF82cD4C1f4d4a5062E9Dac92FF4A9B6304968 | ---      |
 
