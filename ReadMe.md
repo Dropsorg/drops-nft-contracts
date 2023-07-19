@@ -149,6 +149,8 @@
 | USDT wrapper              | 0x862B4c1a21958F19C93d1eA1B492C6B7527923CB | ---      |
 | WETH wrapper              | 0x32cF82cD4C1f4d4a5062E9Dac92FF4A9B6304968 | ---      |
 | USDC wrapper              | 0xA7640072896645f8B5D32C306047713eBF9D60F3 | ---      |
+| rETH-WETH wrapper         | 0x699382d6F3d8Bd7Bb028D3D513907Bc61231ADBf | ---      |
+| wstETH-rETH-sfrxETH wrp   | 0x80D45713E6d83754bC303Ea1651Dc4bACA8d7BB1 | ---      |
 
 
 
